@@ -1,0 +1,245 @@
+@tailwind base;
+
+/* #region fonts */
+@font-face {
+  font-family: 'Lexend Deca';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../media/fonts/lexend-deca-v1-latin-ext_latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Lexend Deca Regular'), local('LexendDeca-Regular'),
+       url('../../media/fonts/lexend-deca-v1-latin-ext_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../media/fonts/lexend-deca-v1-latin-ext_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../media/fonts/lexend-deca-v1-latin-ext_latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../../media/fonts/lexend-deca-v1-latin-ext_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../media/fonts/lexend-deca-v1-latin-ext_latin-regular.svg#LexendDeca') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../media/fonts/alegreya-v13-latin-ext_latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Alegreya Regular'), local('Alegreya-Regular'),
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-regular.svg#Alegreya') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../../media/fonts/alegreya-v13-latin-ext_latin-italic.eot'); /* IE9 Compat Modes */
+  src: local('Alegreya Italic'), local('Alegreya-Italic'),
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-italic.woff') format('woff'), /* Modern Browsers */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-italic.svg#Alegreya') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../../media/fonts/alegreya-v13-latin-ext_latin-500.eot'); /* IE9 Compat Modes */
+  src: local('Alegreya Medium'), local('Alegreya-Medium'),
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-500.woff') format('woff'), /* Modern Browsers */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-500.svg#Alegreya') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: 500;
+  src: url('../../media/fonts/alegreya-v13-latin-ext_latin-500italic.eot'); /* IE9 Compat Modes */
+  src: local('Alegreya Medium Italic'), local('Alegreya-MediumItalic'),
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-500italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-500italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-500italic.woff') format('woff'), /* Modern Browsers */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-500italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-500italic.svg#Alegreya') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../media/fonts/alegreya-v13-latin-ext_latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Alegreya Bold'), local('Alegreya-Bold'),
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-700.svg#Alegreya') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../../media/fonts/alegreya-v13-latin-ext_latin-700italic.eot'); /* IE9 Compat Modes */
+  src: local('Alegreya Bold Italic'), local('Alegreya-BoldItalic'),
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-700italic.woff') format('woff'), /* Modern Browsers */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-700italic.svg#Alegreya') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../../media/fonts/alegreya-v13-latin-ext_latin-800.eot'); /* IE9 Compat Modes */
+  src: local('Alegreya ExtraBold'), local('Alegreya-ExtraBold'),
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-800.woff') format('woff'), /* Modern Browsers */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-800.svg#Alegreya') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: 800;
+  src: url('../../media/fonts/alegreya-v13-latin-ext_latin-800italic.eot'); /* IE9 Compat Modes */
+  src: local('Alegreya ExtraBold Italic'), local('Alegreya-ExtraBoldItalic'),
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-800italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-800italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-800italic.woff') format('woff'), /* Modern Browsers */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-800italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-800italic.svg#Alegreya') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: 900;
+  src: url('../../media/fonts/alegreya-v13-latin-ext_latin-900italic.eot'); /* IE9 Compat Modes */
+  src: local('Alegreya Black Italic'), local('Alegreya-BlackItalic'),
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-900italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-900italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-900italic.woff') format('woff'), /* Modern Browsers */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-900italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-900italic.svg#Alegreya') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../../media/fonts/alegreya-v13-latin-ext_latin-900.eot'); /* IE9 Compat Modes */
+  src: local('Alegreya Black'), local('Alegreya-Black'),
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-900.woff') format('woff'), /* Modern Browsers */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../../media/fonts/alegreya-v13-latin-ext_latin-900.svg#Alegreya') format('svg'); /* Legacy iOS */
+}
+/* #endregion */
+
+/* #region base */
+*,
+*::before,
+*::after {
+  -webkit-tap-highlight-color: transparent;
+  outline: none !important;
+}
+
+body {
+  @apply bg-gray-100 font-alegreya overflow-y-scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+mark {
+  @apply bg-secondary-100;
+}
+/* #endregion */
+
+@tailwind components;
+
+@tailwind utilities;
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* #region tab-menu */
+.tab-menu {
+  @apply flex justify-start;
+}
+
+.tab-menu .tab-menu-item {
+  @apply flex items-center justify-center;
+  @apply select-none cursor-pointer;
+  @apply leading-none text-center;
+  @apply border bg-gray-100;
+  @apply py-2 px-5 -mb-px;
+}
+
+.tab-menu .tab-menu-item.active {
+  @apply bg-white cursor-default;
+
+  border-bottom-color: white !important;
+}
+
+.tab-menu .tab-menu-item:not(.active) {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+}
+
+.tab-menu .tab-menu-item:focus {
+  @apply outline-none;
+}
+
+.tab-menu .tab-menu-item:first-child {
+  @apply rounded-tl;
+}
+
+.tab-menu .tab-menu-item:not(:first-child) {
+  @apply -ml-px;
+}
+
+.tab-menu .tab-menu-item:last-child {
+  @apply rounded-tr;
+}
+/* #endregion tab-menu */
+
+/* #region navbar-footer-mobile */
+.navbar-footer-mobile {
+  @apply fixed left-0 right-0 bottom-0 z-20 transition-transform duration-500 ease-linear transform translate-y-0;
+}
+
+.navbar-footer-mobile-menu {
+  @apply flex bg-white shadow-xs px-4 -mb-px -mx-px;
+}
+
+.navbar-footer-mobile-menu .menu-item {
+  @apply relative w-1/3 h-14 flex flex-col items-center justify-center z-10;
+}
+
+.navbar-footer-mobile-menu .menu-item.active {
+  @apply text-primary-700;
+}
+
+.menu-item-icon {
+  @apply block w-6 h-6;
+}
+
+.menu-item-text {
+  @apply block text-10/16;
+}
+
+body {
+  @apply pb-14;
+}
+/* #endregion */
