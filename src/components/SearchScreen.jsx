@@ -20,7 +20,7 @@ const SearchScreen = ({ close }) => {
   const state = useSelector(state => state);
   const history = useHistory();
 
-  const { words, hasMoreWords } = useQuickSearch({ query: quickSearchValue, init: quickSearchInit });
+  const { words } = useQuickSearch({ query: quickSearchValue, init: quickSearchInit });
 
   const handleQuickSearch = (e) => {
     const { value } = e.target;
@@ -210,7 +210,7 @@ const SearchScreen = ({ close }) => {
                   );
                 })}
 
-                {hasMoreWords &&
+                {/* {hasMoreWords &&
                   <li
                     className={classnames([
                       'flex items-center justify-center min-h-10 bg-white whitespace-pre-wrap cursor-pointer py-3 px-4',
@@ -219,7 +219,7 @@ const SearchScreen = ({ close }) => {
                     ])}
                     onClick={() => history.push(`/search?q=${quickSearchValue}`)}
                   >tüm sonuçları göster</li>
-                }
+                } */}
               </ul>
             }
 
