@@ -109,7 +109,7 @@ module.exports = {
   },
 
   purge: {
-    enabled: false,
+    enabled: true,
     content: [
       './public/*.html',
       './src/**/*.jsx',
