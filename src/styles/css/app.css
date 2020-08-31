@@ -1593,10 +1593,6 @@ mark {
           animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
 @media (min-width: 640px) {
   .sm\:max-w-lg {
     max-width: 32rem;
