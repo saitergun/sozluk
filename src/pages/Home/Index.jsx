@@ -3,8 +3,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 
-import { IconSearch, IconX, IconCheck } from '../../components/Icon';
+import { IconX, IconCheck } from '../../components/Icon';
 import SearchScreen from '../../components/SearchScreen';
+import HomeNavbar from './HomeNavbar';
 
 const PageHome = () => {
   const [showSearchScreen, setShowSearchScreen] = useState(false);
@@ -29,24 +30,7 @@ const PageHome = () => {
 
   return (
     <>
-      <nav className="sticky left-0 top-0 right-0 bg-primary shadow p-2 z-40">
-        <span className="block relative bg-white shadow-sm rounded sm:max-w-lg mx-auto">
-          <button
-            className={classnames([
-              'w-full h-8',
-              'flex items-center justify-start space-x-2',
-              'bg-white text-gray-500 leading-none',
-              'shadow-sm rounded select-none',
-              'px-4'
-            ])}
-            onClick={() => setShowSearchScreen(true)}
-          >
-            <span className="block w-4 h-4"><IconSearch /></span>
-
-            <span className="block">güncel türkçe sözlük'te ara</span>
-          </button>
-        </span>
-      </nav>
+      <HomeNavbar onClick={() => setShowSearchScreen(true)} />
 
       {home &&
         <span className="block sm:max-w-lg mx-auto space-y-4 py-4">
