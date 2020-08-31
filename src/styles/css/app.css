@@ -781,24 +781,6 @@ video {
 
 /* #endregion */
 
-/* #region base */
-
-body {
-  --bg-opacity: 1;
-  background-color: #f7fafc;
-  background-color: rgba(247, 250, 252, var(--bg-opacity));
-  font-family: Alegreya, Georgia, Cambria, "Times New Roman", Times, serif;
-  overflow-y: scroll;
-}
-
-mark {
-  --bg-opacity: 1;
-  background-color: #fff7cc;
-  background-color: rgba(255, 247, 204, var(--bg-opacity));
-}
-
-/* #endregion */
-
 .space-y-1 > :not(template) ~ :not(template) {
   --space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--space-y-reverse)));
@@ -1023,6 +1005,10 @@ mark {
 
 .font-lexend-deca {
   font-family: Lexend Deca, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.font-alegreya {
+  font-family: Alegreya, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 .font-semibold {

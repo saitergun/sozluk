@@ -145,16 +145,6 @@
 }
 /* #endregion */
 
-/* #region base */
-body {
-  @apply bg-gray-100 font-alegreya overflow-y-scroll;
-}
-
-mark {
-  @apply bg-secondary-100;
-}
-/* #endregion */
-
 @tailwind components;
 
 @tailwind utilities;
