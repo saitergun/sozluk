@@ -1,6 +1,9 @@
 // https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 const defaultTheme = require('tailwindcss/defaultTheme');
 
+// parse npm config argumans
+const argv = JSON.parse(process.env.npm_config_argv);
+
 module.exports = {
   theme: {
     extend: {
@@ -109,7 +112,7 @@ module.exports = {
   },
 
   purge: {
-    enabled: true,
+    enabled: argv.original.indexOf('--purge') > -1,
     content: [
       './public/*.html',
       './src/**/*.jsx',
