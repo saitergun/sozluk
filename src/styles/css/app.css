@@ -947,6 +947,16 @@ video {
   border-radius: 9999px;
 }
 
+.rounded-t {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.rounded-b {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
 .border-b-2 {
   border-bottom-width: 2px;
 }
@@ -1130,16 +1140,16 @@ video {
   margin-bottom: -1px;
 }
 
+.max-h-screen {
+  max-height: 100vh;
+}
+
 .min-h-10 {
   min-height: 2.5rem;
 }
 
 .focus\:outline-none:focus {
   outline: 0;
-}
-
-.overflow-hidden {
-  overflow: hidden;
 }
 
 .overflow-y-auto {
@@ -1569,8 +1579,47 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:bg-gray-900 {
+    --bg-opacity: 1;
+    background-color: #1a202c;
+    background-color: rgba(26, 32, 44, var(--bg-opacity));
+  }
+
+  .sm\:border-none {
+    border-style: none;
+  }
+
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:h-full {
+    height: 100%;
+  }
+
+  .sm\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sm\:max-h-full {
+    max-height: 100%;
+  }
+
   .sm\:max-w-lg {
     max-width: 32rem;
+  }
+
+  .sm\:opacity-75 {
+    opacity: 0.75;
+  }
+
+  .sm\:p-16 {
+    padding: 4rem;
+  }
+
+  .sm\:w-full {
+    width: 100%;
   }
 }
 
