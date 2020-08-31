@@ -783,23 +783,12 @@ video {
 
 /* #region base */
 
-*,
-*::before,
-*::after {
-  -webkit-tap-highlight-color: transparent;
-  outline: none !important;
-}
-
 body {
   --bg-opacity: 1;
   background-color: #f7fafc;
   background-color: rgba(247, 250, 252, var(--bg-opacity));
   font-family: Alegreya, Georgia, Cambria, "Times New Roman", Times, serif;
   overflow-y: scroll;
-}
-
-body::-webkit-scrollbar {
-  display: none;
 }
 
 mark {

@@ -146,19 +146,8 @@
 /* #endregion */
 
 /* #region base */
-*,
-*::before,
-*::after {
-  -webkit-tap-highlight-color: transparent;
-  outline: none !important;
-}
-
 body {
   @apply bg-gray-100 font-alegreya overflow-y-scroll;
-}
-
-body::-webkit-scrollbar {
-  display: none;
 }
 
 mark {
