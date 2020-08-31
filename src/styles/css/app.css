@@ -1597,65 +1597,6 @@ mark {
   display: none;
 }
 
-/* #region tab-menu */
-
-.tab-menu {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.tab-menu .tab-menu-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  cursor: pointer;
-  line-height: 1;
-  text-align: center;
-  border-width: 1px;
-  --bg-opacity: 1;
-  background-color: #f7fafc;
-  background-color: rgba(247, 250, 252, var(--bg-opacity));
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  margin-bottom: -1px;
-}
-
-.tab-menu .tab-menu-item.active {
-  --bg-opacity: 1;
-  background-color: #fff;
-  background-color: rgba(255, 255, 255, var(--bg-opacity));
-  cursor: default;
-  border-bottom-color: white !important;
-}
-
-.tab-menu .tab-menu-item:not(.active) {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
-}
-
-.tab-menu .tab-menu-item:focus {
-  outline: 0;
-}
-
-.tab-menu .tab-menu-item:first-child {
-  border-top-left-radius: 0.25rem;
-}
-
-.tab-menu .tab-menu-item:not(:first-child) {
-  margin-left: -1px;
-}
-
-.tab-menu .tab-menu-item:last-child {
-  border-top-right-radius: 0.25rem;
-}
-
-/* #endregion tab-menu */
-
 @media (min-width: 640px) {
   .sm\:max-w-lg {
     max-width: 32rem;
