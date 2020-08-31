@@ -1,5 +1,6 @@
 // set history from localstorage
 let home = null;
+let autocomplete = [];
 let history = [];
 let bookmarks = [];
 
@@ -9,6 +10,16 @@ let bookmarks = [];
 
     if (data !== null && data !== undefined) {
       home = JSON.parse(data);
+    }
+  } catch (error) {}
+})();
+
+(() => {
+  try {
+    const data = window.localStorage.getItem('sozluk:saved-autocomplete');
+
+    if (data !== null && data !== undefined) {
+      autocomplete = JSON.parse(data);
     }
   } catch (error) {}
 })();
@@ -45,7 +56,7 @@ const initialState = {
 
   home,
 
-  autocomplete: [],
+  autocomplete,
 
   history,
   historyLimit: 50,
@@ -63,6 +74,9 @@ const dataReducer = (state = initialState, { type, payload }) => {
 
     case 'SET_AUTOCOMPLETE':
       state.autocomplete = payload;
+
+      window.localStorage.setItem('sozluk:saved-autocomplete', JSON.stringify(state.autocomplete));
+      window.localStorage.setItem('sozluk:saved-autocomplete-updated-at', Date.now());
 
       return {...state};
 

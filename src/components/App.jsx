@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -14,6 +14,9 @@ import AppNavbarHeader from './AppNavbarHeader';
 import AppNavbarFooter from './AppNavbarFooter';
 
 const App = () => {
+  const [autocompleteUpdated, setAutocompleteUpdated] = useState(false);
+  const [autocompleteUpdateCount, setAutocompleteUpdateCount] = useState(0);
+
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
   const location = useLocation();
@@ -23,16 +26,30 @@ const App = () => {
   const { autocomplete } = state.data;
   const { loading, loadingErrorText } = state.app;
 
+  // set loading status
+  useLayoutEffect(() => {
+    if (autocomplete.length > 0) {
+      dispatch({ type: 'SET_APP_LOADING_STATUS', payload: false })
+    }
+  }, [dispatch, autocomplete.length]);
+
   // set autocomplete
   useLayoutEffect(() => {
-    if (!loadingErrorText && autocomplete.length === 0) {
+    if (!autocompleteUpdated && autocompleteUpdateCount < 3) {
       fetch('/autocomplete.json')
         .then((response) => response.json())
-        .then((response) => dispatch({ type: 'SET_AUTOCOMPLETE', payload: response.map((word) => word.madde) }))
-        .catch(() => dispatch({ type: 'SET_APP_LOADING_ERROR_TEXT', payload: 'Sözcükler yüklenirken beklenmeyen bir hata oluştu.' }))
-        .finally(() => dispatch({ type: 'SET_APP_LOADING_STATUS', payload: false }));
+        .then((response) => {
+          dispatch({ type: 'SET_AUTOCOMPLETE', payload: response });
+          setAutocompleteUpdated(true);
+          setAutocompleteUpdateCount(3);
+        })
+        .catch(() => {
+          dispatch({ type: 'SET_APP_LOADING_ERROR_TEXT', payload: 'Sözcükler yüklenirken beklenmeyen bir hata oluştu.' });
+          setAutocompleteUpdated(false);
+          setAutocompleteUpdateCount(autocompleteUpdateCount+1);
+        })
     }
-  });
+  }, [dispatch, autocompleteUpdated, autocompleteUpdateCount]);
 
   if (loading && !loadingErrorText) {
     return (
