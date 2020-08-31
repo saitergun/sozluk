@@ -29,11 +29,11 @@ const PageHome = () => {
 
   return (
     <>
-      <span className="block bg-primary shadow p-4 px-4">
-        <span className="block relative bg-white shadow-sm rounded">
+      <nav className="sticky left-0 top-0 right-0 bg-primary shadow p-2 z-40">
+        <span className="block relative bg-white shadow-sm rounded sm:max-w-lg mx-auto">
           <button
             className={classnames([
-              'w-full h-10',
+              'w-full h-8',
               'flex items-center justify-start space-x-2',
               'bg-white text-gray-500 leading-none',
               'shadow-sm rounded select-none',
@@ -46,10 +46,10 @@ const PageHome = () => {
             <span className="block">güncel türkçe sözlük'te ara</span>
           </button>
         </span>
-      </span>
+      </nav>
 
       {home &&
-        <span className="block space-y-4 py-4">
+        <span className="block sm:max-w-lg mx-auto space-y-4 py-4">
           {home?.kelime?.length > 0 &&
             <section className="block relative bg-white shadow-sm py-3 px-4">
               <span className="bg-secondary-100 text-secondary-700 text-xs leading-none">GÜNÜN KELİMESİ</span>
