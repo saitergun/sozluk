@@ -5,7 +5,7 @@ const WordBoxBirlesikler = ({ birlesikler }) => {
   return (
     <section className="bg-white shadow-sm mt-4">
       <header className="py-3 px-4">
-        <h1 className="text-2xl leading-none">birleşikler</h1>
+        <h3 className="text-2xl leading-none">birleşikler</h3>
       </header>
 
       <main className="flex flex-col border-t border-gray-200 divide-y divide-gray-200">

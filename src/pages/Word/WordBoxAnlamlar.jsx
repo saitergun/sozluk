@@ -38,7 +38,7 @@ const WordBoxAnlamlar = ({ word, anlamlar }) => {
   return (
     <section className="bg-white shadow-sm mt-4">
       <header className="flex items-center justify-between py-1 px-4">
-        <h1 className="text-2xl leading-none">{anlamlar.length > 1 ? 'anlamlar' : 'anlam'}</h1>
+        <h3 className="text-2xl leading-none">{anlamlar.length > 1 ? 'anlamlar' : 'anlam'}</h3>
 
         <button
           aria-label={isBookmarked ? 'kayıtlı listesinden kaldır' : 'kayıtlı listesine ekle'}
