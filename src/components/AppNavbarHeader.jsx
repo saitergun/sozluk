@@ -25,6 +25,7 @@ const AppNavbarHeader = () => {
         <span className="block relative sm:max-w-lg mx-auto">
           {location.pathname !== '/' &&
             <button
+              aria-label="Geri dön"
               className={classnames([
                 'absolute left-2 top-2',
                 'w-8 h-8 flex flex-grow items-center justify-center',
@@ -37,6 +38,7 @@ const AppNavbarHeader = () => {
 
           {location.pathname !== '/' &&
             <button
+              aria-label="Arama yap"
               className={classnames([
                 'absolute right-2 top-2',
                 'w-8 h-8 flex flex-grow items-center justify-center',
