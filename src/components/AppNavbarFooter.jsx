@@ -23,6 +23,8 @@ const AppNavbarFooter = () => {
             <span className="block w-6 h-6">
               <IconHouse fill={isHome} />
             </span>
+
+            <span className="sr-only">Anasayfa</span>
           </NavLink>
 
           <NavLink
@@ -34,6 +36,8 @@ const AppNavbarFooter = () => {
             <span className="block w-6 h-6">
               <IconBookmarks fill={isSaved} />
             </span>
+
+            <span className="sr-only">Kayıtlı</span>
           </NavLink>
 
           <NavLink
@@ -45,6 +49,8 @@ const AppNavbarFooter = () => {
             <span className="block w-6 h-6">
               <IconClock fill={isHistory} />
             </span>
+
+            <span className="sr-only">Geçmiş</span>
           </NavLink>
         </nav>
       </span>
