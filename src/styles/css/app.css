@@ -1379,12 +1379,6 @@ video {
   color: rgba(128, 109, 0, var(--text-opacity));
 }
 
-.text-secondary-900 {
-  --text-opacity: 1;
-  color: #4d4100;
-  color: rgba(77, 65, 0, var(--text-opacity));
-}
-
 .hover\:text-primary-800:hover {
   --text-opacity: 1;
   color: #007999;

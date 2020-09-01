@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { IconX, IconBookmarks } from '../../components/Icon';
+import Button from '../../components/Button';
 
 const PageSaved = () => {
   const state = useSelector(state => state);
@@ -51,14 +52,14 @@ const PageSaved = () => {
 
       {state.data.bookmarks.length > 1 &&
         <span className="block px-4 my-4">
-          <button
-            className="block w-full bg-secondary active:bg-secondary-400 text-secondary-900 font-lexend-deca text-sm py-1 px-4"
+          <Button
+            text="TÜMÜNÜ KALDIR"
             onClick={() => {
               if (window.confirm('tüm kayıtlar silinecek.')) {
                 dispatch({ type: 'CLEAR_BOOKMARKS' });
               }
             }}
-          >TÜMÜNÜ KALDIR</button>
+          />
         </span>
       }
     </main>

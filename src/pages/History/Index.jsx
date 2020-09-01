@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { IconX, IconClock } from '../../components/Icon';
+import Button from '../../components/Button';
 
 const PageHistory = () => {
   const state = useSelector(state => state);
@@ -53,14 +54,14 @@ const PageHistory = () => {
 
       {history.length > 1 &&
         <span className="block px-4 my-4">
-          <button
-            className="block w-full bg-secondary active:bg-secondary-400 text-secondary-900 font-lexend-deca text-sm py-1 px-4"
+          <Button
+            text="TÜMÜNÜ KALDIR"
             onClick={() => {
               if (window.confirm('tüm geçmiş silinecek.')) {
                 dispatch({ type: 'CLEAR_HISTORY' });
               }
             }}
-          >TÜMÜNÜ KALDIR</button>
+          />
         </span>
       }
     </main>
