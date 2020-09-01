@@ -14,7 +14,7 @@ const HomeIncorrectWords = ({ title, subtitle, words, isColorful }) => {
           }
 
           {subtitle &&
-            <h6 className="text-sm text-gray-500">{subtitle}</h6>
+            <p className="text-sm text-gray-500">{subtitle}</p>
           }
         </header>
       }

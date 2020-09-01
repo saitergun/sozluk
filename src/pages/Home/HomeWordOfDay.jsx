@@ -16,9 +16,9 @@ const HomeWordOfDay = ({ title, word, signification }) => {
       }
 
       <main className="text-lg mt-2">
-        <h6 className="font-bold">
+        <p className="font-bold">
           <Link to={linkTo}>{word}</Link>
-        </h6>
+        </p>
 
         <p>
           <Link to={linkTo}>{signification}</Link>
