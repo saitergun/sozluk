@@ -41,6 +41,7 @@ const WordBoxAnlamlar = ({ word, anlamlar }) => {
         <h1 className="text-2xl leading-none">{anlamlar.length > 1 ? 'anlamlar' : 'anlam'}</h1>
 
         <button
+          aria-label={isBookmarked ? 'kayıtlı listesinden kaldır' : 'kayıtlı listesine ekle'}
           className={classnames('w-10 h-10 active:bg-gray-100 rounded-full p-2', {
             'text-primary': isBookmarked
           })}
