@@ -31,11 +31,11 @@ const HomeIncorrectWords = ({ title, subtitle, words, isColorful }) => {
               >
                 <span
                   className={classnames('flex items-center space-x-1', {
-                    'text-red-600': isColorful,
+                    'text-red-700': isColorful,
                   })}
                 >
                   {isColorful &&
-                    <span className="block w-4 h-4"><IconX /></span>
+                    <span className="block w-5 h-5"><IconX /></span>
                   }
 
                   <span className="block leading-none">{word.incorrect}</span>
@@ -43,13 +43,13 @@ const HomeIncorrectWords = ({ title, subtitle, words, isColorful }) => {
 
                 <span
                   className={classnames('flex items-center space-x-1', {
-                    'text-green-600': isColorful,
+                    'text-green-700': isColorful,
                   })}
                 >
                   <span className="block leading-none">{word.correct}</span>
 
                   {isColorful &&
-                    <span className="block w-4 h-4"><IconCheck /></span>
+                    <span className="block w-5 h-5"><IconCheck /></span>
                   }
                 </span>
               </li>
