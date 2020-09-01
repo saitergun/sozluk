@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
 
-import { IconX, IconBookmarks } from '../../components/Icon';
+import { IconBookmarks } from '../../components/Icon';
 import Button from '../../components/Button';
+import SavedWordList from '../../components/SavedWordList';
 
 const PageSaved = () => {
   const state = useSelector(state => state);
@@ -15,9 +15,9 @@ const PageSaved = () => {
   }, [dispatch]);
 
   return (
-    <main className="sm:max-w-lg mx-auto">
+    <main className="sm:max-w-lg mx-auto py-4">
       {state.data.bookmarks.length === 0 &&
-        <span className="flex flex-col items-center justify-center text-center p-8 my-4">
+        <span className="flex flex-col items-center justify-center text-center p-8">
           <span className="block w-16 h-16"><IconBookmarks /></span>
 
           <p className="text-xl mt-4">kaydettiğin içerik burada listenecek.</p>
@@ -25,29 +25,14 @@ const PageSaved = () => {
       }
 
       {state.data.bookmarks.length > 0 &&
-        <span className="block bg-white border-t border-b border-gray-200 my-4">
-          <span className="flex flex-col divide-y divide-gray-200">
-            {state.data.bookmarks.map((word, index) => {
-              return (
-                <span className="flex items-center justify-between py-1 px-4" key={index}>
-                  <Link
-                    className="flex-1 no-underline hover:underline hover:text-primary-800"
-                    to={`/word?w=${word}&r=bookmarks`}
-                  >{word}</Link>
-
-                  <button
-                    className="w-7 h-7 rounded-full text-gray-500 active:bg-gray-100 p-1"
-                    onClick={() => {
-                      if (window.confirm(`"${word}" kayıtlardan silinecek.`)) {
-                        dispatch({ type: 'REMOVE_FROM_BOOKMARKS', payload: word });
-                      }
-                    }}
-                  ><IconX /></button>
-                </span>
-              );
-            })}
-          </span>
-        </span>
+        <SavedWordList
+          words={state.data.bookmarks}
+          remove={(word) => {
+            if (window.confirm(`"${word}" kayıtlardan silinecek.`)) {
+              dispatch({ type: 'REMOVE_FROM_BOOKMARKS', payload: word });
+            }
+          }}
+        />
       }
 
       {state.data.bookmarks.length > 1 &&
