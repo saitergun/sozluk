@@ -13,10 +13,10 @@ const AppNavbarFooter = () => {
   return (
     <span className="fixed left-0 right-0 bottom-0 z-20 transition-transform duration-500 ease-linear transform translate-y-0">
       <span className="block sm:max-w-lg mx-auto">
-        <nav className="flex bg-white shadow-xs px-4 -mb-px -mx-px">
+        <nav className="flex bg-white shadow-xs px-4 -mb-px -mx-px sm:rounded-t">
           <NavLink
             to="/"
-            className="relative w-1/3 h-14 flex flex-col items-center justify-center z-10"
+            className="relative w-1/3 h-12 flex flex-col items-center justify-center z-10"
             activeClassName="text-primary-700"
             exact
           >
@@ -27,7 +27,7 @@ const AppNavbarFooter = () => {
 
           <NavLink
             to="/saved"
-            className="relative w-1/3 h-14 flex flex-col items-center justify-center z-10"
+            className="relative w-1/3 h-12 flex flex-col items-center justify-center z-10"
             activeClassName="text-primary-700"
             exact
           >
@@ -38,7 +38,7 @@ const AppNavbarFooter = () => {
 
           <NavLink
             to="/history"
-            className="relative w-1/3 h-14 flex flex-col items-center justify-center z-10"
+            className="relative w-1/3 h-12 flex flex-col items-center justify-center z-10"
             activeClassName="text-primary-700"
             exact
           >

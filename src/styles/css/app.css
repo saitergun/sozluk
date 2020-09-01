@@ -1067,10 +1067,6 @@ video {
   height: 3rem;
 }
 
-.h-14 {
-  height: 3.5rem;
-}
-
 .h-16 {
   height: 4rem;
 }
@@ -1229,8 +1225,8 @@ video {
   padding-right: 1.25rem;
 }
 
-.pb-14 {
-  padding-bottom: 3.5rem;
+.pb-12 {
+  padding-bottom: 3rem;
 }
 
 .placeholder-gray-500::-webkit-input-placeholder {
@@ -1607,6 +1603,11 @@ video {
 
   .sm\:rounded {
     border-radius: 0.25rem;
+  }
+
+  .sm\:rounded-t {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
   }
 
   .sm\:border-none {
