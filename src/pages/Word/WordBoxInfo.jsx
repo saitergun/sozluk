@@ -1,7 +1,7 @@
 import React from 'react';
 
 const WordBoxInfo = ({ lisan, telaffuz }) => {
-  if (lisan === undefined && telaffuz === undefined) {
+  if (lisan === null && telaffuz === null) {
     return null;
   }
 

@@ -74,12 +74,10 @@ const PageWord = ({ word }) => {
           {words.filter((_, index) => index === wordIndex).map((word) => {
             return (
               <React.Fragment key={word.madde_id}>
-                {word.telaffuz &&
-                  <WordBoxInfo
-                    lisan={word.lisan}
-                    telaffuz={word.telaffuz}
-                  />
-                }
+                <WordBoxInfo
+                  lisan={word.lisan}
+                  telaffuz={word.telaffuz}
+                />
 
                 {word?.anlamlarListe.length > 0 &&
                   <WordBoxAnlamlar anlamlar={word.anlamlarListe} word={word.madde} />
