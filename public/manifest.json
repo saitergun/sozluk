@@ -1,7 +1,7 @@
 {
   "name": "sözlük",
   "short_name": "sözlük",
-  "description": "Türk Dil Kurumu sözlük uygulaması",
+  "description": "türkçe sözlük uygulaması",
   "background_color": "#fff",
   "theme_color": "#00a1cc",
   "display": "standalone",
