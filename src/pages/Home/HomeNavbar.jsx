@@ -6,7 +6,9 @@ import { IconSearch } from '../../components/Icon';
 export const HomeNavbar = ({ onClick }) => {
   useEffect(() => {
     const event = (e) => {
-      if (e.key === '/' || e.keyCode === 111 || e.which === 111) {
+      const keyCode = e.keyCode || e.which;
+
+      if ((keyCode > 64 && keyCode < 91) || (keyCode > 96 && keyCode < 123) || keyCode === 8) {
         onClick();
       }
     };
