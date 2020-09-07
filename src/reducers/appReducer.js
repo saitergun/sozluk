@@ -1,9 +1,13 @@
+import isMobile from 'is-mobile';
+
 const initialState = {
   name: 'sözlük',
   title: 'sözlük',
 
   loading: true,
   loadingErrorText: null,
+
+  isMobile: isMobile(),
 };
 
 const appReducer = (state = initialState, { type, payload }) => {

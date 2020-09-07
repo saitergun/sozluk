@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import classnames from 'classnames';
-import isMobile from 'is-mobile';
 
 import useQuickSearch from '../hooks/useQuickSearch';
 
@@ -25,7 +24,7 @@ const SearchScreen = ({ close }) => {
   const handleQuickSearch = (e) => {
     const { value } = e.target;
 
-    let delayTimeout = isMobile() ? 500 : 300;
+    let delayTimeout = state.app.isMobile ? 500 : 300;
 
     if (value === '' || value.indexOf('q') > -1 || value.indexOf('w') > -1 || value.indexOf('x') > -1) {
       delayTimeout = 0;
