@@ -25,7 +25,7 @@ const SearchScreen = ({ close }) => {
   const handleQuickSearch = (e) => {
     const { value } = e.target;
 
-    let delayTimeout = isMobile() ? 400 : 200;
+    let delayTimeout = isMobile() ? 500 : 300;
 
     if (value === '' || value.indexOf('q') > -1 || value.indexOf('w') > -1 || value.indexOf('x') > -1) {
       delayTimeout = 0;
