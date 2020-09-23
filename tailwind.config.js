@@ -115,8 +115,8 @@ module.exports = {
     enabled: argv.original.indexOf('--purge') > -1,
     content: [
       './public/*.html',
-      './src/**/*.jsx',
-      './src/**/*.js'
+      './src/**/*.tsx',
+      './src/**/*.ts'
     ],
   },
 };

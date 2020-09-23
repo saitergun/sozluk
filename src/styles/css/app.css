@@ -1011,6 +1011,10 @@ video {
   display: flex;
 }
 
+.table {
+  display: table;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1321,10 +1325,6 @@ video {
   left: 0.5rem;
 }
 
-.resize {
-  resize: both;
-}
-
 .shadow-xs {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
 }
@@ -1413,10 +1413,6 @@ video {
   color: rgba(0, 121, 153, var(--text-opacity));
 }
 
-.underline {
-  text-decoration: underline;
-}
-
 .no-underline {
   text-decoration: none;
 }
@@ -1425,13 +1421,8 @@ video {
   text-decoration: underline;
 }
 
-.hover\:no-underline:hover {
-  text-decoration: none;
-}
-
 .select-none {
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
