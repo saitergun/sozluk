@@ -14,7 +14,7 @@ const HomeNavbar = ({ onClick }: HomeNavbarType) => {
         'm', 'n', 'o', 'ö', 'p', 'r', 's', 'ş', 't', 'u', 'ü', 'v', 'y', 'z', '/', ' '
       ];
 
-      if (e.key === ' ' || e.key === '/') {
+      if (e.key === '/') {
         e.preventDefault();
       }
 
