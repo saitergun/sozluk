@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState, useLayoutEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
@@ -28,7 +27,6 @@ const SearchScreen = ({ close }: SearchScreen) => {
 
   const quickSearchInput = useRef<HTMLInputElement>(null!);
   const state = useSelector((state: IStateRoot) => state);
-  const { autocomplete } = state.data;
   const history = useHistory();
 
   const { words }: { words: String[]} = useQuickSearch(quickSearchDebouncedValue);
