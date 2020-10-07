@@ -197,8 +197,7 @@ const SearchScreen = ({ close }: SearchScreen) => {
                           onClick={() => handlePushWord(word)}
                         >
                           <span className="block text-lg leading-none">
-                            {word}
-                            {/* <HighlightText text={word} query={quickSearchValue} /> */}
+                            <HighlightText text={word} query={quickSearchValue} />
                           </span>
                         </li>
                       );
