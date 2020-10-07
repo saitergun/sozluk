@@ -11,7 +11,7 @@ type ScoredWordsType = {
 const useQuickSearch = (query: String) => {
   // console.log('useQuickSearch query', query);
 
-  const [words, setWords] = useState<String[] | []>([]);
+  const [words, setWords] = useState<String[]>([]);
   const [hasMoreWords, setHasMoreWords] = useState(false);
 
   const state = useSelector((state: IStateRoot) => state);
