@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useLocation, useHistory } from 'react-router-dom';
 import classnames from 'classnames';
@@ -14,6 +14,29 @@ const AppNavbarHeader = () => {
   const state = useSelector((state: IStateRoot) => state);
   const location = useLocation();
   const history = useHistory();
+
+  useEffect(() => {
+    const event = (e: KeyboardEvent) => {
+      const allowedKeys: String[] = [
+        'a', 'b', 'c', 'ç', 'd', 'e', 'f', 'g', 'ğ', 'h', 'ı', 'i', 'j', 'k', 'l',
+        'm', 'n', 'o', 'ö', 'p', 'r', 's', 'ş', 't', 'u', 'ü', 'v', 'y', 'z', '/', ' '
+      ];
+
+      if (e.key === '/') {
+        e.preventDefault();
+      }
+
+      if (!e.ctrlKey && !e.altKey && allowedKeys.includes(e.key)) {
+        setShowSearchScreen(true);
+      }
+    };
+
+    window.addEventListener('keydown', event);
+
+    return () => {
+      window.removeEventListener('keydown', event);
+    };
+  }, []);
 
   return (
     <>
