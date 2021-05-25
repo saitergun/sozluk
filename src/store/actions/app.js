@@ -43,12 +43,10 @@ export const startApp = () => {
         payload: error,
       });
     }).finally(() => {
-      setTimeout(() => {
-        dispatch({
-          type: 'app/SET_APP_LOADING_STATUS',
-          payload: false,
-        });
-      }, 1000);
+      dispatch({
+        type: 'app/SET_APP_LOADING_STATUS',
+        payload: false,
+      });
     });
   };
 };
