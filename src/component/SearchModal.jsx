@@ -182,7 +182,7 @@ const SearchModal = ({
           .then((response) => {
             setWords(Array.from(new Set(response.map(({ madde }) => madde))));
           })
-          .catch(() => console.log('Öneriler yüklenirken beklenmeyen bir hata oluştu.'));
+          .catch(/* () => console.log('Öneriler yüklenirken beklenmeyen bir hata oluştu.') */);
       }
 
       setShowListSkeleton(false);
