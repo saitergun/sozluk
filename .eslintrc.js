@@ -13,7 +13,6 @@ module.exports = {
     'object-curly-newline': 'off',
 
     'react/prop-types': 'off',
-    'react/button-has-type': 'off',
     'react/jsx-closing-tag-location': 'off',
     'react/no-array-index-key': 'off',
     'react/jsx-props-no-multi-spaces': 'off',

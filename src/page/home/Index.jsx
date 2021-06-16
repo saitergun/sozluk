@@ -12,6 +12,7 @@ import Icon from '../../component/Icon';
 const FakeInput = ({ onClick, onFocus }) => {
   return (
     <button
+      type="button"
       className="w-full h-12 flex items-center justify-center font-light text-20/16 text-alternative-400 cursor-text bg-white border rounded-sm space-x-3 z-10"
       onClick={onClick}
       onFocus={onFocus}

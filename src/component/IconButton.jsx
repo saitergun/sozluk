@@ -4,6 +4,7 @@ import classNames from 'classnames';
 const IconButton = ({ children, small, onClick }) => {
   return (
     <button
+      type="button"
       className={classNames([
         'flex items-center justify-center text-24/16 rounded-full',
         'transition duration-100 ease-in',
