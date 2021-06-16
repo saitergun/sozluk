@@ -1,7 +1,12 @@
 import React, { forwardRef } from 'react';
 import classNames from 'classnames';
 
-const Button = forwardRef(({ children, primary, secondary, onClick }, ref) => {
+const Button = forwardRef(({
+  children,
+  primary,
+  secondary,
+  onClick,
+}, ref) => {
   return (
     <button
       type="button"

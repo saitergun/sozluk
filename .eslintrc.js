@@ -10,7 +10,6 @@ module.exports = {
     'no-console': 'off',
     'arrow-body-style': 'off',
     'max-len': 'off',
-    'object-curly-newline': 'off',
 
     'react/prop-types': 'off',
     'react/jsx-filename-extension': [

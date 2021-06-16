@@ -31,7 +31,13 @@ const ICONS = {
   RiLightbulbFlashLine,
 };
 
-const Icon = ({ name, className, white, primary, secondary }) => {
+const Icon = ({
+  name,
+  className,
+  white,
+  primary,
+  secondary,
+}) => {
   if (!Object.hasOwnProperty.call(ICONS, name)) {
     return null;
   }

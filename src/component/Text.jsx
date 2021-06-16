@@ -1,7 +1,20 @@
 import { createElement } from 'react';
 import classNames from 'classnames';
 
-const Text = ({ children, tag, title1, title2, large, small, muted, bold, truncate, nowrap, primary, white }) => {
+const Text = ({
+  children,
+  tag,
+  title1,
+  title2,
+  large,
+  small,
+  muted,
+  bold,
+  truncate,
+  nowrap,
+  primary,
+  white,
+}) => {
   return createElement(tag ?? 'p', {
     className: classNames('leading-none', {
       'text-36/16': title1,

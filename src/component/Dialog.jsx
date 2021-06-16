@@ -4,7 +4,15 @@ import { useClickAway, useKey } from 'react-use';
 import Text from './Text';
 import Button from './Button';
 
-const Dialog = ({ title, description, cancelButtonLabel, onClickCancelButton, submitButtonLabel, onClickSubmitButton, onClose }) => {
+const Dialog = ({
+  title,
+  description,
+  cancelButtonLabel,
+  onClickCancelButton,
+  submitButtonLabel,
+  onClickSubmitButton,
+  onClose,
+}) => {
   const containerRef = useRef();
   const submitButtonRef = useRef();
 

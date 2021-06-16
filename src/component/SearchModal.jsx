@@ -1,7 +1,18 @@
-import React, { forwardRef, useState, useLayoutEffect, useEffect, useRef } from 'react';
+import React, {
+  forwardRef,
+  useState,
+  useLayoutEffect,
+  useEffect,
+  useRef,
+} from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { useKey, useDebounce, useClickAway, useStartTyping } from 'react-use';
+import {
+  useKey,
+  useDebounce,
+  useClickAway,
+  useStartTyping,
+} from 'react-use';
 
 import {
   getWordsByQuery as dispatchGetWordsByQuery,
@@ -13,7 +24,14 @@ import IconButton from './IconButton';
 import List from './List';
 import HighlightText from './HighlightText';
 
-const ListWord = ({ words, icon, highlight, headerMessage, selectedWordIndex, onFocusWord }) => {
+const ListWord = ({
+  words,
+  icon,
+  highlight,
+  headerMessage,
+  selectedWordIndex,
+  onFocusWord,
+}) => {
   const listRef = useRef();
 
   useEffect(() => {
@@ -109,7 +127,12 @@ const Input = forwardRef(({ query, onChangeQuery, onFocus }, ref) => {
   );
 });
 
-const SearchModal = ({ history, historyWords, getWordsByQuery, onClose }) => {
+const SearchModal = ({
+  history,
+  historyWords,
+  getWordsByQuery,
+  onClose,
+}) => {
   const [query, setQuery] = useState('');
   const [words, setWords] = useState([]);
 

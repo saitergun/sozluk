@@ -1,7 +1,12 @@
 import { createElement } from 'react';
 import classNames from 'classnames';
 
-const Tag = ({ children, classes, primary, secondary }) => {
+const Tag = ({
+  children,
+  classes,
+  primary,
+  secondary,
+}) => {
   return createElement('span', {
     className: classNames('text-13/16', {
       'bg-primary-100 text-primary-900': primary,

@@ -10,7 +10,15 @@ const List = forwardRef(({ children }, ref) => {
   );
 });
 
-List.Item = ({ children, justifyStart, justifyCenter, justifyBetween, compact, to, onFocusCapture }) => {
+List.Item = ({
+  children,
+  justifyStart,
+  justifyCenter,
+  justifyBetween,
+  compact,
+  to,
+  onFocusCapture,
+}) => {
   const className = classNames('px-4', {
     'hover:bg-primary-50 active:bg-primary-100 cursor-pointer': to,
     'focus:outline-none focus:bg-primary-50 focus:ring-2 ring-inset ring-primary-400 ring-offset-0 ring-offset-white': to,

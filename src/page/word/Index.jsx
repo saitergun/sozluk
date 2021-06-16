@@ -1,4 +1,9 @@
-import React, { useState, useLayoutEffect, useEffect, useMemo } from 'react';
+import React, {
+  useState,
+  useLayoutEffect,
+  useEffect,
+  useMemo,
+} from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import qs from 'qs';
@@ -26,7 +31,13 @@ const useLocationParams = () => {
   });
 };
 
-const PageWord = ({ history, location, bookmarks, addHistory, toggleBookmark }) => {
+const PageWord = ({
+  history,
+  location,
+  bookmarks,
+  addHistory,
+  toggleBookmark,
+}) => {
   const { w } = useLocationParams(location);
 
   const [word, setWord] = useState([]);

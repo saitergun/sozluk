@@ -9,7 +9,13 @@ import {
 import SearchModal from '../component/SearchModal';
 import AppBar from '../component/AppBar';
 
-const Page = ({ history, location, children, title, setAppTitle }) => {
+const Page = ({
+  history,
+  location,
+  children,
+  title,
+  setAppTitle,
+}) => {
   const [showSearchModal, setShowSearchModal] = useState(false);
 
   useLayoutEffect(() => {
