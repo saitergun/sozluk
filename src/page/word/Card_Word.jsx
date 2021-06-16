@@ -17,7 +17,7 @@ const AnlamOrnekler = ({ ornekler }) => {
         small
         muted
       >
-        {ornek.ornek}{yazar}
+        {`${ornek.ornek}${yazar}`}
       </Text>
     );
   });

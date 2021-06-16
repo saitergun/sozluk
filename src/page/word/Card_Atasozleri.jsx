@@ -34,7 +34,7 @@ const CardAtasozleri = ({ atasozleri }) => {
           <Button
             onClick={() => setShowAll(true)}
           >
-            tümünü göster ({atasozleri.length - 3} daha)
+            {`tümünü göster (${atasozleri.length - 3} data)`}
           </Button>
         )}
       </List>

@@ -36,7 +36,7 @@ const CardBirlesikler = ({ birlesikler }) => {
           <Button
             onClick={() => setShowAll(true)}
           >
-            tümünü göster ({items.length - 3} daha)
+            {`tümünü göster (${items.length - 3} data)`}
           </Button>
         )}
       </List>
