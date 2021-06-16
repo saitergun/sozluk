@@ -1,23 +1,29 @@
-import React from 'react';
+import { createElement, StrictMode } from 'react';
 import ReactDOM from 'react-dom';
+import { Provider as StoreProvider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import './styles/css/index.css';
 
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
-import { StoreProvider } from './store';
+import store from './store';
 
 import App from './App';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <StoreProvider>
-      <Router>
-        <App />
-      </Router>
-    </StoreProvider>
-  </React.StrictMode>,
+  createElement(
+    StrictMode, null,
+    createElement(
+      StoreProvider, { store },
+      createElement(
+        Router, null,
+        createElement(
+          App,
+        ),
+      ),
+    ),
+  ),
   document.getElementById('root'),
 );
 
