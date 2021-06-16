@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import {
-  removeBookmark as actionRemoveBookmark,
-  clearBookmarks as actionClearBookmarks,
-} from '../../store/actions/data';
+  removeBookmark as dispatchRemoveBookmark,
+  clearBookmarks as dispatchClearBookmarks,
+} from '../../state/data/dispatches';
 
 import Page from '../../template/Page';
 
@@ -117,8 +117,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProp = {
-  removeBookmark: actionRemoveBookmark,
-  clearBookmarks: actionClearBookmarks,
+  removeBookmark: dispatchRemoveBookmark,
+  clearBookmarks: dispatchClearBookmarks,
 };
 
 export default connect(mapStateToProps, mapDispatchToProp)(PageBookmarks);

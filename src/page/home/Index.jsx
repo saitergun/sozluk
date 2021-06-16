@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { useStartTyping } from 'react-use';
 
 import {
-  setAppTitle as actionSetAppTitle,
-} from '../../store/actions/app';
+  actionSetAppTitle,
+} from '../../state/app/actions';
 
 import SearchModal from '../../component/SearchModal';
 import Icon from '../../component/Icon';

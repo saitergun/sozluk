@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
 
 import {
-  startApp as actionStartApp,
-} from './store/actions/app';
+  startApp as dispatchStartApp,
+} from './state/app/dispatches';
 
 import Icon from './component/Icon';
 import BottomNavbar from './component/BottomNavbar';
@@ -15,22 +15,20 @@ import PageWord from './page/word/Index';
 import PageBookmarks from './page/bookmarks/Index';
 import PageHistory from './page/history/Index';
 
-const AppLoader = () => (
-  <span className="fixed inset-0 w-full h-full flex items-center justify-center bg-white text-primary overflow-hidden p-8">
-    <Icon
-      className="text-72/16 animate-spin"
-      name="RiLoaderLine"
-    />
-  </span>
-);
-
 const App = ({ startApp, loading, loadingErrorText }) => {
   useLayoutEffect(() => {
     startApp();
   }, []);
 
   if (loading && !loadingErrorText) {
-    return <AppLoader />;
+    return (
+      <span className="fixed inset-0 w-full h-full flex items-center justify-center bg-white text-primary overflow-hidden p-8">
+        <Icon
+          className="text-72/16 animate-spin"
+          name="RiLoaderLine"
+        />
+      </span>
+    );
   }
 
   return (
@@ -72,7 +70,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-  startApp: actionStartApp,
+  startApp: dispatchStartApp,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

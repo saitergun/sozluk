@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 import {
-  setAppTitle as actionSetAppTitle,
-} from '../store/actions/app';
+  setAppTitle as dispatchSetAppTitle,
+} from '../state/app/dispatches';
 
 import SearchModal from '../component/SearchModal';
 import AppBar from '../component/AppBar';
@@ -49,7 +49,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProp = {
-  setAppTitle: actionSetAppTitle,
+  setAppTitle: dispatchSetAppTitle,
 };
 
 export default connect(mapStateToProps, mapDispatchToProp)(withRouter(Page));

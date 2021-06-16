@@ -3,11 +3,9 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { useKey, useDebounce, useClickAway, useStartTyping } from 'react-use';
 
-import * as API from '../util/api';
-
 import {
-  getWordsByQuery as actionGetWordsByQuery,
-} from '../store/actions/data';
+  getWordsByQuery as dispatchGetWordsByQuery,
+} from '../state/data/dispatches';
 
 import Text from './Text';
 import Icon from './Icon';
@@ -160,7 +158,12 @@ const SearchModal = ({ history, historyWords, getWordsByQuery, onClose }) => {
         setShowListSuggestion(true);
         setWords([]);
 
-        API.getSuggestions(query).then(setWords);
+        fetch(`https://sozluk.gov.tr/oneri?soz=${query}`)
+          .then((response) => response.json())
+          .then((response) => {
+            setWords(Array.from(new Set(response.map(({ madde }) => madde))));
+          })
+          .catch(() => console.log('Öneriler yüklenirken beklenmeyen bir hata oluştu.'));
       }
 
       setShowListSkeleton(false);
@@ -291,7 +294,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-  getWordsByQuery: actionGetWordsByQuery,
+  getWordsByQuery: dispatchGetWordsByQuery,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(SearchModal));

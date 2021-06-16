@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import {
-  removeHistory as actionRemoveHistory,
-  clearHistory as actionClearHistory,
-} from '../../store/actions/data';
+  removeHistory as dispatchRemoveHistory,
+  clearHistory as dispatchClearHistory,
+} from '../../state/data/dispatches';
 
 import Page from '../../template/Page';
 
@@ -117,8 +117,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProp = {
-  removeHistory: actionRemoveHistory,
-  clearHistory: actionClearHistory,
+  removeHistory: dispatchRemoveHistory,
+  clearHistory: dispatchClearHistory,
 };
 
 export default connect(mapStateToProps, mapDispatchToProp)(PageHistory);

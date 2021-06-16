@@ -3,12 +3,10 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import qs from 'qs';
 
-import * as API from '../../util/api';
-
 import {
-  addHistory as actionAddHistory,
-  toggleBookmark as actionToggleBookmark,
-} from '../../store/actions/data';
+  addHistory as dispatchAddHistory,
+  toggleBookmark as dispatchToggleBookmark,
+} from '../../state/data/dispatches';
 
 import Page from '../../template/Page';
 
@@ -55,15 +53,20 @@ const PageWord = ({ history, location, bookmarks, addHistory, toggleBookmark }) 
     setLoadingErrorMessage(null);
 
     if (w) {
-      API.getWord({ word: w, signal: abortController.signal })
+      fetch(`https://sozluk.gov.tr/gts?ara=${w}`, { signal: abortController.signal })
+        .then((response) => response.json())
         .then((response) => {
-          setWord(response);
+          if (response?.error) {
+            setLoadingErrorMessage(response.error);
+          } else {
+            setWord(response);
 
-          addHistory(w);
+            addHistory(w);
+          }
         })
-        .catch((error) => {
+        .catch(() => {
           if (!abortController.signal.aborted) {
-            setLoadingErrorMessage(error);
+            setLoadingErrorMessage('Söz yüklenirken beklenmeyen bir hata oluştu.');
           }
         })
         .finally(() => setLoading(false));
@@ -138,9 +141,9 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-  addHistory: actionAddHistory,
+  addHistory: dispatchAddHistory,
 
-  toggleBookmark: actionToggleBookmark,
+  toggleBookmark: dispatchToggleBookmark,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(PageWord));
