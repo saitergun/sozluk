@@ -34,7 +34,9 @@ const HighlightText = ({ text, query }) => {
         child = node.nodeValue;
       }
 
-      const el = React.createElement(tag, { key: `node-${index}` }, child);
+      const key = `node-${index}`;
+
+      const el = React.createElement(tag, { key }, child);
 
       children.push(el);
     });

@@ -13,7 +13,6 @@ module.exports = {
     'object-curly-newline': 'off',
 
     'react/prop-types': 'off',
-    'react/no-array-index-key': 'off',
     'react/jsx-props-no-multi-spaces': 'off',
     'react/jsx-one-expression-per-line': 'off',
     'react/jsx-filename-extension': [

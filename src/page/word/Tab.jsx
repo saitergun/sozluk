@@ -12,10 +12,10 @@ const Tab = ({ count, selectedIndex, onSelectIndex }) => {
         'grid-cols-4': count === 4,
       })}
     >
-      {[...Array(count)].map((_, index) => {
+      {[...Array(count)].map((key, index) => {
         return (
           <Button
-            key={index}
+            key={key}
             onClick={() => onSelectIndex(index)}
             secondary={index === selectedIndex}
           >

@@ -37,7 +37,7 @@ const ListWord = ({ words, icon, highlight, headerMessage, selectedWordIndex, on
       {words.length > 0 && words.map((word, index) => {
         return (
           <List.Item
-            key={`${word}-${index}`}
+            key={word}
             to={`/word?w=${word}`}
             onFocusCapture={() => onFocusWord(index)}
             justifyStart

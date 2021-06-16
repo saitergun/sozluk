@@ -35,10 +35,10 @@ const PageHistory = ({ history, removeHistory, clearHistory }) => {
         {history.length > 0 && (
           <Card>
             <List>
-              {history.map((word, index) => {
+              {history.map((word) => {
                 return (
                   <List.Item
-                    key={index}
+                    key={word}
                     justifyBetween
                     compact
                   >

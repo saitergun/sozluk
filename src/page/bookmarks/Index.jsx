@@ -35,10 +35,10 @@ const PageBookmarks = ({ bookmarks, removeBookmark, clearBookmarks }) => {
         {bookmarks.length > 0 && (
           <Card>
             <List>
-              {bookmarks.map((word, index) => {
+              {bookmarks.map((word) => {
                 return (
                   <List.Item
-                    key={index}
+                    key={word}
                     justifyBetween
                     compact
                   >
