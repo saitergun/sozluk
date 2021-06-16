@@ -12,7 +12,9 @@ const Tab = ({ count, selectedIndex, onSelectIndex }) => {
         'grid-cols-4': count === 4,
       })}
     >
-      {[...Array(count)].map((key, index) => {
+      {[...Array(count)].map((_, index) => {
+        const key = index;
+
         return (
           <Button
             key={key}
