@@ -16,19 +16,17 @@ const CardAtasozleri = ({ atasozleri }) => {
       </Card.Header>
 
       <List>
-        {atasozleri.slice(0, !showAll ? 3 : undefined).map((item) => {
-          return (
-            <List.Item
-              key={item.madde_id}
-              to={`/word?w=${item.madde}`}
-              justifyStart
-            >
-              <Icon name="RiSendPlaneLine" />
+        {atasozleri.slice(0, !showAll ? 3 : undefined).map((item) => (
+          <List.Item
+            key={item.madde_id}
+            to={`/word?w=${item.madde}`}
+            justifyStart
+          >
+            <Icon name="RiSendPlaneLine" />
 
-              <Text>{`${item.on_taki ?? ''}${item.madde}`}</Text>
-            </List.Item>
-          );
-        })}
+            <Text>{`${item.on_taki ?? ''}${item.madde}`}</Text>
+          </List.Item>
+        ))}
 
         {atasozleri.length > 3 && !showAll && (
           <Button

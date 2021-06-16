@@ -8,7 +8,6 @@ module.exports = {
 
   rules: {
     'no-console': 'off',
-    'arrow-body-style': 'off',
     'max-len': 'off',
 
     'react/prop-types': 'off',

@@ -35,26 +35,24 @@ const PageHistory = ({ history, removeHistory, clearHistory }) => {
         {history.length > 0 && (
           <Card>
             <List>
-              {history.map((word) => {
-                return (
-                  <List.Item
-                    key={word}
-                    justifyBetween
-                    compact
-                  >
-                    <Link to={`/word?w=${word}`}>
-                      <Text>{word}</Text>
-                    </Link>
+              {history.map((word) => (
+                <List.Item
+                  key={word}
+                  justifyBetween
+                  compact
+                >
+                  <Link to={`/word?w=${word}`}>
+                    <Text>{word}</Text>
+                  </Link>
 
-                    <IconButton
-                      small
-                      onClick={() => setShowRemoveDialog(word)}
-                    >
-                      <Icon name="RiCloseLine" />
-                    </IconButton>
-                  </List.Item>
-                );
-              })}
+                  <IconButton
+                    small
+                    onClick={() => setShowRemoveDialog(word)}
+                  >
+                    <Icon name="RiCloseLine" />
+                  </IconButton>
+                </List.Item>
+              ))}
             </List>
           </Card>
         )}

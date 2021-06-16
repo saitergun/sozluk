@@ -35,26 +35,24 @@ const PageBookmarks = ({ bookmarks, removeBookmark, clearBookmarks }) => {
         {bookmarks.length > 0 && (
           <Card>
             <List>
-              {bookmarks.map((word) => {
-                return (
-                  <List.Item
-                    key={word}
-                    justifyBetween
-                    compact
-                  >
-                    <Link to={`/word?w=${word}`}>
-                      <Text>{word}</Text>
-                    </Link>
+              {bookmarks.map((word) => (
+                <List.Item
+                  key={word}
+                  justifyBetween
+                  compact
+                >
+                  <Link to={`/word?w=${word}`}>
+                    <Text>{word}</Text>
+                  </Link>
 
-                    <IconButton
-                      small
-                      onClick={() => setShowRemoveDialog(word)}
-                    >
-                      <Icon name="RiCloseLine" />
-                    </IconButton>
-                  </List.Item>
-                );
-              })}
+                  <IconButton
+                    small
+                    onClick={() => setShowRemoveDialog(word)}
+                  >
+                    <Icon name="RiCloseLine" />
+                  </IconButton>
+                </List.Item>
+              ))}
             </List>
           </Card>
         )}

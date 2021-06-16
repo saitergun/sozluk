@@ -52,52 +52,48 @@ const ListWord = ({
         </List.Item>
       )}
 
-      {words.length > 0 && words.map((word, index) => {
-        return (
-          <List.Item
-            key={word}
-            to={`/word?w=${word}`}
-            onFocusCapture={() => onFocusWord(index)}
-            justifyStart
-          >
-            <Icon name={icon} />
+      {words.length > 0 && words.map((word, index) => (
+        <List.Item
+          key={word}
+          to={`/word?w=${word}`}
+          onFocusCapture={() => onFocusWord(index)}
+          justifyStart
+        >
+          <Icon name={icon} />
 
-            {highlight ? (
-              <Text><HighlightText text={word} query={highlight} /></Text>
-            ) : (
-              <Text>{word}</Text>
-            )}
-          </List.Item>
-        );
-      })}
+          {highlight ? (
+            <Text><HighlightText text={word} query={highlight} /></Text>
+          ) : (
+            <Text>{word}</Text>
+          )}
+        </List.Item>
+      ))}
     </List>
   );
 };
 
-const ListSkeleton = () => {
-  return (
-    <List>
-      {[...Array(5).keys()].map((index) => {
-        const percent = Math.floor((Math.random() * 30));
-        const width = `${percent > 15 ? percent : 15}%`;
+const ListSkeleton = () => (
+  <List>
+    {[...Array(5).keys()].map((index) => {
+      const percent = Math.floor((Math.random() * 30));
+      const width = `${percent > 15 ? percent : 15}%`;
 
-        return (
-          <List.Item
-            key={index}
-            justifyStart
-          >
-            <span className="block w-4 h-4 bg-alternative-200 animate-pulse rounded-full" />
+      return (
+        <List.Item
+          key={index}
+          justifyStart
+        >
+          <span className="block w-4 h-4 bg-alternative-200 animate-pulse rounded-full" />
 
-            <span
-              className="block h-3 bg-alternative-200 animate-pulse rounded-sm my-0.5"
-              style={{ width }}
-            />
-          </List.Item>
-        );
-      })}
-    </List>
-  );
-};
+          <span
+            className="block h-3 bg-alternative-200 animate-pulse rounded-sm my-0.5"
+            style={{ width }}
+          />
+        </List.Item>
+      );
+    })}
+  </List>
+);
 
 const Input = forwardRef(({ query, onChangeQuery, onFocus }, ref) => {
   const handleKeyDown = (e) => {

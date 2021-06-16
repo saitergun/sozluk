@@ -18,19 +18,17 @@ const CardBirlesikler = ({ birlesikler }) => {
       </Card.Header>
 
       <List>
-        {items.slice(0, !showAll ? 3 : undefined).map((item) => {
-          return (
-            <List.Item
-              key={item}
-              to={`/word?w=${item}`}
-              justifyStart
-            >
-              <Icon name="RiSendPlaneLine" />
+        {items.slice(0, !showAll ? 3 : undefined).map((item) => (
+          <List.Item
+            key={item}
+            to={`/word?w=${item}`}
+            justifyStart
+          >
+            <Icon name="RiSendPlaneLine" />
 
-              <Text>{item}</Text>
-            </List.Item>
-          );
-        })}
+            <Text>{item}</Text>
+          </List.Item>
+        ))}
 
         {items.length > 3 && !showAll && (
           <Button

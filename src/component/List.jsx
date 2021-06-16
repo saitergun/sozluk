@@ -2,13 +2,11 @@ import React, { forwardRef } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 
-const List = forwardRef(({ children }, ref) => {
-  return (
-    <div className="w-full flex flex-col divide-y" ref={ref}>
-      {children}
-    </div>
-  );
-});
+const List = forwardRef(({ children }, ref) => (
+  <div className="w-full flex flex-col divide-y" ref={ref}>
+    {children}
+  </div>
+));
 
 List.Item = ({
   children,

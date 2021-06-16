@@ -33,17 +33,15 @@ const BottomNavbar = ({ items }) => {
   );
 };
 
-BottomNavbar.Item = ({ to, icon }) => {
-  return (
-    <NavLink
-      to={to}
-      className="flex flex-col items-center justify-center"
-      activeClassName="text-primary-600 pointer-events-none"
-      exact
-    >
-      <Icon name={icon} className="text-24/16" />
-    </NavLink>
-  );
-};
+BottomNavbar.Item = ({ to, icon }) => (
+  <NavLink
+    to={to}
+    className="flex flex-col items-center justify-center"
+    activeClassName="text-primary-600 pointer-events-none"
+    exact
+  >
+    <Icon name={icon} className="text-24/16" />
+  </NavLink>
+);
 
 export default BottomNavbar;

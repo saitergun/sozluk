@@ -25,11 +25,9 @@ import CardAtasozleri from './Card_Atasozleri';
 import CardBirlesikler from './Card_Birlesikler';
 import CardWord from './Card_Word';
 
-const useLocationParams = () => {
-  return qs.parse(window.location.search, {
-    ignoreQueryPrefix: true,
-  });
-};
+const useLocationParams = () => qs.parse(window.location.search, {
+  ignoreQueryPrefix: true,
+});
 
 const PageWord = ({
   history,
