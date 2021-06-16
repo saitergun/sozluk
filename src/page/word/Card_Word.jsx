@@ -40,31 +40,33 @@ const CardWord = ({ word, bookmarked, onClickToggleBookmark }) => (
 
     {word?.anlamlarListe && (
     <List>
-      {word.anlamlarListe.sort((a, b) => Number(a.anlam_sira) - Number(b.anlam_sira)).map((anlam) => (
-        <List.Item key={anlam.anlam_id}>
-          <Text large>
-            {anlam?.ozelliklerListe && anlam.ozelliklerListe.map((ozellik) => (
-              <Tag
-                key={ozellik.ozellik_id}
-                classes="mr-1.5"
-                secondary
-              >
-                {ozellik.tam_adi}
-              </Tag>
-            ))}
+      {word.anlamlarListe
+        .sort((a, b) => Number(a.anlam_sira) - Number(b.anlam_sira))
+        .map((anlam) => (
+          <List.Item key={anlam.anlam_id}>
+            <Text large>
+              {anlam?.ozelliklerListe && anlam.ozelliklerListe.map((ozellik) => (
+                <Tag
+                  key={ozellik.ozellik_id}
+                  classes="mr-1.5"
+                  secondary
+                >
+                  {ozellik.tam_adi}
+                </Tag>
+              ))}
 
-            {anlam.anlam}
-          </Text>
+              {anlam.anlam}
+            </Text>
 
-          {anlam?.orneklerListe && (
-          <>
-            <span className="w-full h-1.5 block" />
+            {anlam?.orneklerListe && (
+            <>
+              <span className="w-full h-1.5 block" />
 
-            <AnlamOrnekler ornekler={anlam.orneklerListe} />
-          </>
-          )}
-        </List.Item>
-      ))}
+              <AnlamOrnekler ornekler={anlam.orneklerListe} />
+            </>
+            )}
+          </List.Item>
+        ))}
     </List>
     )}
   </Card>

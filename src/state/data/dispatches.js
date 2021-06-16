@@ -235,11 +235,15 @@ export const getWordsByQuery = (query) => (dispatch, getState) => {
     let score = 0;
 
     if (!isExactMatch && indexOf === 0) {
-      score = 1 + Number((nameLocaleLowerCase.slice(queryLocaleLowerCase.length).length / 10).toFixed(2));
+      const slicedLength = nameLocaleLowerCase.slice(queryLocaleLowerCase.length).length;
+
+      score = 1 + Number((slicedLength / 10).toFixed(2));
     }
 
     if (!isExactMatch && indexOf !== 0) {
-      score = 3 + Number((nameLocaleLowerCase.replace(queryLocaleLowerCase, '').length / 10).toFixed(2));
+      const slicedLength = nameLocaleLowerCase.replace(queryLocaleLowerCase, '').length;
+
+      score = 3 + Number((slicedLength / 10).toFixed(2));
     }
 
     return {

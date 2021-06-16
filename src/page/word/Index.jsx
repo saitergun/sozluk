@@ -45,7 +45,9 @@ const PageWord = ({
   const [selectedInsideWordIndex, setSelectedInsideWordIndex] = useState(0);
 
   const bookmarked = useMemo(() => bookmarks.some((b) => b === w), [bookmarks, w]);
-  const selectedInsideWord = useMemo(() => word[selectedInsideWordIndex], [word, selectedInsideWordIndex]);
+  const selectedInsideWord = useMemo(() => word[selectedInsideWordIndex], [
+    word, selectedInsideWordIndex,
+  ]);
 
   // redirect if not taken w
   useLayoutEffect(() => {
