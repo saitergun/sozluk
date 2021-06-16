@@ -21,7 +21,9 @@ const MessageCard = ({ icon, message, buttonLabel, onClickButton }) => {
           <Button
             onClick={onClickButton}
             primary
-          >{buttonLabel}</Button>
+          >
+            {buttonLabel}
+          </Button>
         )}
       </div>
     </Card>

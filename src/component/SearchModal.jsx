@@ -223,7 +223,9 @@ const SearchModal = ({ history, historyWords, getWordsByQuery, onClose }) => {
               <span className="absolute left-1 top-1 text-primary">
                 <IconButton
                   onClick={onClose}
-                ><Icon name="RiArrowLeftLine" /></IconButton>
+                >
+                  <Icon name="RiArrowLeftLine" />
+                </IconButton>
               </span>
 
               <Input
@@ -241,7 +243,9 @@ const SearchModal = ({ history, historyWords, getWordsByQuery, onClose }) => {
 
                       inputRef.current.focus();
                     }}
-                  ><Icon name="RiCloseLine" /></IconButton>
+                  >
+                    <Icon name="RiCloseLine" />
+                  </IconButton>
                 </span>
               )}
             </header>

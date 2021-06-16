@@ -18,7 +18,9 @@ const Tab = ({ count, selectedIndex, onSelectIndex }) => {
             key={index}
             onClick={() => onSelectIndex(index)}
             secondary={index === selectedIndex}
-          >{`${index + 1}. anlam`}</Button>
+          >
+            {`${index + 1}. anlam`}
+          </Button>
         );
       })}
     </nav>

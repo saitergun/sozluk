@@ -21,7 +21,9 @@ Card.Body = ({ children, noPad }) => {
       className={classNames({
         'py-3 px-4': !noPad,
       })}
-    >{children}</div>
+    >
+      {children}
+    </div>
   );
 };
 

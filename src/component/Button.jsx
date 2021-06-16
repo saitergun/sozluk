@@ -12,7 +12,9 @@ const Button = forwardRef(({ children, primary, secondary, onClick }, ref) => {
       })}
       onClick={onClick}
       ref={ref}
-    >{children}</button>
+    >
+      {children}
+    </button>
   );
 });
 

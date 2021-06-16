@@ -27,7 +27,9 @@ List.Item = ({ children, justifyStart, justifyCenter, justifyBetween, compact, t
         to={to}
         className={className}
         onFocusCapture={onFocusCapture}
-      >{children}</Link>
+      >
+        {children}
+      </Link>
     );
   }
 

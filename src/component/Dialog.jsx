@@ -30,13 +30,17 @@ const Dialog = ({ title, description, cancelButtonLabel, onClickCancelButton, su
       <footer className="grid grid-cols-2 gap-4">
         <Button
           onClick={onClickCancelButton}
-        >{cancelButtonLabel}</Button>
+        >
+          {cancelButtonLabel}
+        </Button>
 
         <Button
           onClick={onClickSubmitButton}
           ref={submitButtonRef}
           primary
-        >{submitButtonLabel}</Button>
+        >
+          {submitButtonLabel}
+        </Button>
       </footer>
     </section>
   );

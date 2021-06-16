@@ -18,7 +18,9 @@ const IconButton = ({ children, small, onClick }) => {
       })}
 
       onClick={onClick}
-    >{children}</button>
+    >
+      {children}
+    </button>
   );
 };
 

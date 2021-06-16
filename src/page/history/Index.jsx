@@ -49,7 +49,9 @@ const PageHistory = ({ history, removeHistory, clearHistory }) => {
                     <IconButton
                       small
                       onClick={() => setShowRemoveDialog(word)}
-                    ><Icon name="RiCloseLine" /></IconButton>
+                    >
+                      <Icon name="RiCloseLine" />
+                    </IconButton>
                   </List.Item>
                 );
               })}
@@ -62,7 +64,9 @@ const PageHistory = ({ history, removeHistory, clearHistory }) => {
             <Button
               secondary
               onClick={() => setShowClearDialog(true)}
-            >TÜMÜNÜ KALDIR</Button>
+            >
+              TÜMÜNÜ KALDIR
+            </Button>
           </span>
         )}
       </Page>

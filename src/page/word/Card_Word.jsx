@@ -16,7 +16,9 @@ const AnlamOrnekler = ({ ornekler }) => {
         key={ornek.ornek_id}
         small
         muted
-      >{ornek.ornek}{yazar}</Text>
+      >
+        {ornek.ornek}{yazar}
+      </Text>
     );
   });
 };
@@ -50,7 +52,9 @@ const CardWord = ({ word, bookmarked, onClickToggleBookmark }) => {
                       key={ozellik.ozellik_id}
                       classes="mr-1.5"
                       secondary
-                    >{ozellik.tam_adi}</Tag>
+                    >
+                      {ozellik.tam_adi}
+                    </Tag>
                   ))}
 
                   {anlam.anlam}
