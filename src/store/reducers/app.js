@@ -4,8 +4,6 @@ const INITAL_STATE = {
 
   loading: true,
   loadingErrorText: null,
-
-  // isMobile: isMobile(),
 };
 
 const appReducer = (state = INITAL_STATE, { type, payload }) => {
