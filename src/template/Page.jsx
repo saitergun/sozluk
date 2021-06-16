@@ -25,7 +25,6 @@ const Page = ({ history, location, children, title, setAppTitle }) => {
       <nav className="sticky left-0 top-0 right-0 w-full h-12 bg-primary text-white shadow z-10">
         <AppBar
           title={title ?? 'yükleniyor'}
-
           onClickBackButton={() => history.goBack()}
           onClickSearchButton={() => setShowSearchModal(true)}
         />

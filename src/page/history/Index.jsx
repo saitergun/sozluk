@@ -76,17 +76,14 @@ const PageHistory = ({ history, removeHistory, clearHistory }) => {
           <Dialog
             title={showRemoveDialog}
             description="Bu söz geçmişinden kaldırılacak"
-
             cancelButtonLabel="VAZGEÇ"
             onClickCancelButton={() => setShowRemoveDialog(false)}
-
             submitButtonLabel="KALDIR"
             onClickSubmitButton={() => {
               removeHistory(showRemoveDialog);
 
               setShowRemoveDialog(false);
             }}
-
             onClose={() => setShowRemoveDialog(false)}
           />
         </span>
@@ -97,17 +94,14 @@ const PageHistory = ({ history, removeHistory, clearHistory }) => {
           <Dialog
             title="Tümünü Kaldır"
             description="Geçmişteki tüm sözler kaldırılacak"
-
             cancelButtonLabel="VAZGEÇ"
             onClickCancelButton={() => setShowClearDialog(false)}
-
             submitButtonLabel="KALDIR"
             onClickSubmitButton={() => {
               clearHistory();
 
               setShowClearDialog(false);
             }}
-
             onClose={() => setShowClearDialog(false)}
           />
         </span>

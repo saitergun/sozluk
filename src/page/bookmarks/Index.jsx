@@ -76,17 +76,14 @@ const PageBookmarks = ({ bookmarks, removeBookmark, clearBookmarks }) => {
           <Dialog
             title={showRemoveDialog}
             description="Bu söz kayıtlı listesinden kaldırılacak"
-
             cancelButtonLabel="VAZGEÇ"
             onClickCancelButton={() => setShowRemoveDialog(false)}
-
             submitButtonLabel="KALDIR"
             onClickSubmitButton={() => {
               removeBookmark(showRemoveDialog);
 
               setShowRemoveDialog(false);
             }}
-
             onClose={() => setShowRemoveDialog(false)}
           />
         </span>
@@ -97,17 +94,14 @@ const PageBookmarks = ({ bookmarks, removeBookmark, clearBookmarks }) => {
           <Dialog
             title="Tümünü Kaldır"
             description="Geçmişteki tüm sözler kaldırılacak"
-
             cancelButtonLabel="VAZGEÇ"
             onClickCancelButton={() => setShowClearDialog(false)}
-
             submitButtonLabel="KALDIR"
             onClickSubmitButton={() => {
               clearBookmarks();
 
               setShowClearDialog(false);
             }}
-
             onClose={() => setShowClearDialog(false)}
           />
         </span>

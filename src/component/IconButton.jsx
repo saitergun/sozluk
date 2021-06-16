@@ -16,7 +16,6 @@ const IconButton = ({ children, small, onClick }) => {
         'w-10 h-10': !small,
         'w-7 h-7': small,
       })}
-
       onClick={onClick}
     >
       {children}
