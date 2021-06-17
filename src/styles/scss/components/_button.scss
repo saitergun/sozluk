@@ -1,0 +1,49 @@
+@mixin ring($color: null) {
+  @if $color != null {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px $color;
+  }
+}
+
+.button {
+  font-size: 1rem;
+  font-weight: 600;
+  color: $alternative-900;
+
+  border-radius: 0.125rem;
+  padding: 0.375rem 1rem;
+
+  user-select: none;
+
+  &:focus {
+    outline: none;
+    z-index: 1;
+
+    @include ring($alternative-400);
+  }
+}
+
+.button.primary {
+  background-color: $primary;
+  color: white;
+
+  &:active {
+    background-color: $primary-600;
+  }
+
+  &:focus {
+    @include ring($primary-600);
+  }
+}
+
+.button.secondary {
+  background-color: $secondary-400;
+  color: $secondary-900;
+
+  &:active {
+    background-color: $secondary;
+  }
+
+  &:focus {
+    @include ring($secondary-700);
+  }
+}

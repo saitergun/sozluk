@@ -4,6 +4,7 @@ import { Provider as StoreProvider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import './styles/css/index.css';
+import './styles/scss/index.scss';
 
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
