@@ -32,7 +32,5 @@ test('renders secondary prop classes correctly', () => {
 test('render classes props classes correctly', () => {
   const { container } = render(<Tag classes="deneme-class">deneme-class</Tag>);
 
-  screen.debug();
-
   expect(container.firstChild).toHaveClass('deneme-class');
 });
