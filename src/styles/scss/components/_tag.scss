@@ -1,0 +1,19 @@
+.tag {
+  text-align: center;
+  font-size: 0.8125rem;
+
+  border-radius: 0.125rem;
+
+  background-color: $alternative-100;
+  color: $alternative-900;
+}
+
+.tag.primary {
+  background-color: $primary-100;
+  color: $primary-900;
+}
+
+.tag.secondary {
+  background-color: $secondary-100;
+  color: $secondary-900;
+}
